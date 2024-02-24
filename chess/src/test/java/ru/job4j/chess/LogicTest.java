@@ -49,7 +49,7 @@ public class LogicTest {
     @Disabled
     @Test
     public void whenMoveThenFigureCopyToDest()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException{
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         logic.add(bishopBlack);
