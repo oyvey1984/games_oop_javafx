@@ -55,7 +55,5 @@ public class LogicTest {
         logic.add(bishopBlack);
         logic.move(Cell.C1, Cell.F4);
         assertThat(bishopBlack.position()).isEqualTo(Cell.F4);
-        //не можем обновиться изначального бишопа в рамках теста
-        //не можем получить фигуру по ячейке F4
     }
 }
