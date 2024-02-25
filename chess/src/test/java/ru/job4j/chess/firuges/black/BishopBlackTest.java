@@ -1,6 +1,5 @@
 package ru.job4j.chess.firuges.black;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.firuges.Cell;
@@ -25,28 +24,28 @@ class BishopBlackTest {
     @Test
     public void whenWayToDownAndRightIsOk() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Cell[] wayArray= {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] wayArray = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertThat(bishopBlack.way(Cell.G5)).isEqualTo(wayArray);
     }
 
     @Test
     public void whenWayToDownAndLeftIsOk() {
         BishopBlack bishopBlack = new BishopBlack(Cell.E3);
-        Cell[] wayArray= {Cell.F2, Cell.G1};
+        Cell[] wayArray = {Cell.F2, Cell.G1};
         assertThat(bishopBlack.way(Cell.G1)).isEqualTo(wayArray);
     }
 
     @Test
     public void whenWayToTopAndRightIsOk() {
         BishopBlack bishopBlack = new BishopBlack(Cell.H4);
-        Cell[] wayArray= {Cell.G5, Cell.F6, Cell.E7, Cell.D8};
+        Cell[] wayArray = {Cell.G5, Cell.F6, Cell.E7, Cell.D8};
         assertThat(bishopBlack.way(Cell.D8)).isEqualTo(wayArray);
     }
 
     @Test
     public void whenWayToTopAndLeftIsOk() {
         BishopBlack bishopBlack = new BishopBlack(Cell.E3);
-        Cell[] wayArray= {Cell.D2, Cell.C1};
+        Cell[] wayArray = {Cell.D2, Cell.C1};
         assertThat(bishopBlack.way(Cell.C1)).isEqualTo(wayArray);
     }
 

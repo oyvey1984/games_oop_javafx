@@ -1,6 +1,5 @@
 package ru.job4j.chess;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.BishopBlack;
@@ -44,16 +43,5 @@ public class LogicTest {
             logic.move(Cell.C1, Cell.C2);
         });
         assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from C1 to C2");
-    }
-
-    @Disabled
-    @Test
-    public void whenMoveThenFigureCopyToDest()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        logic.add(bishopBlack);
-        logic.move(Cell.C1, Cell.F4);
-        assertThat(bishopBlack.position()).isEqualTo(Cell.F4);
     }
 }

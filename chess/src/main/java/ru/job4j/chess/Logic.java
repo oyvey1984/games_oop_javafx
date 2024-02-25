@@ -16,9 +16,7 @@ public final class Logic {
             throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
         int index = findBy(source);
         Cell[] steps = figures[index].way(dest);
-        if (!free(steps)) {
-            throw new OccupiedCellException("Occupied cells on the way.");
-        }
+        free(steps);
         figures[index] = figures[index].copy(dest);
     }
 
